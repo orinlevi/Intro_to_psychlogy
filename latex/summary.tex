@@ -1,0 +1,519 @@
+% מבוא לפסיכולוגיה - סיכום מקיף
+% XeLaTeX with Hebrew support
+\documentclass[11pt,a4paper]{article}
+
+% Hebrew and RTL support
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{hebrew}
+\setotherlanguage{english}
+\setmainfont{David CLM}[Script=Hebrew]
+\newfontfamily\hebrewfont{David CLM}[Script=Hebrew]
+\newfontfamily\englishfont{Times New Roman}
+
+% Page layout
+\usepackage[margin=2cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\leftmark}
+\fancyhead[L]{מבוא לפסיכולוגיה}
+\fancyfoot[C]{\thepage}
+
+% Colors and boxes
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\definecolor{tealcolor}{RGB}{0,128,128}
+\definecolor{cyancolor}{RGB}{0,188,212}
+\definecolor{lightgray}{RGB}{245,245,245}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+
+% Lists and formatting
+\usepackage{enumitem}
+\setlist[itemize]{nosep, leftmargin=*}
+\setlist[enumerate]{nosep, leftmargin=*}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=tealcolor,
+    urlcolor=cyancolor
+}
+
+% Section formatting
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{tealcolor}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{cyancolor}}{\thesubsection}{1em}{}
+
+% Custom boxes
+\newtcolorbox{infobox}[1][]{
+    colback=lightgray,
+    colframe=tealcolor,
+    fonttitle=\bfseries,
+    title=#1,
+    breakable
+}
+
+\newtcolorbox{warnbox}[1][]{
+    colback=yellow!10,
+    colframe=orange!80!black,
+    fonttitle=\bfseries,
+    title=#1,
+    breakable
+}
+
+\newtcolorbox{tipbox}[1][]{
+    colback=green!10,
+    colframe=green!60!black,
+    fonttitle=\bfseries,
+    title=#1,
+    breakable
+}
+
+% Title
+\title{
+    \vspace{-1cm}
+    {\Huge\bfseries מבוא לפסיכולוגיה}\\[0.5cm]
+    {\Large סיכום מקיף לקורס}\\[0.3cm]
+    {\large אוניברסיטת תל אביב}
+}
+\author{נוצר על ידי Orin Levi}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+%====================================
+\section{יחידה 1 - מהי פסיכולוגיה?}
+%====================================
+
+\subsection{הגדרות פסיכולוגיה}
+\begin{itemize}
+    \item \textbf{לפי ויקיפדיה}: פסיכולוגיה היא מדע ההתנהגות והתהליכים המנטליים
+    \item \textbf{לפי מילון מרים וובסטר}: פסיכולוגיה היא מדע המיינד וההתנהגות
+    \item \textbf{לפי ספר הלימוד}: פסיכולוגיה היא המחקר המדעי של התנהגות ותהליכים מנטליים
+\end{itemize}
+
+\subsection{המדע האמפירי}
+\begin{infobox}[מאפייני השיטה המדעית]
+\begin{itemize}
+    \item \textbf{תצפיות ומדידות אובייקטיביות} - הבסיס של המדע האמפירי
+    \item \textbf{יכולת ניבוי} - היתרון המשמעותי של המדע האמפירי לעומת מקורות ידע לא מדעיים
+    \item \textbf{תיאוריות זמניות} - המדע לא מקבל שום דבר כאמת נצחית
+    \item \textbf{שיחזור (רפליקציה)} - חזרה על תוצאות במחקרים שונים
+\end{itemize}
+\end{infobox}
+
+\subsection{דוגמה: טיפול ב-PTSD}
+הפרעת PTSD היא הפרעה נפשית שמתפתחת כתוצאה מאירוע טראומטי שמאיים על הביטחון וגורם להרגשה של חוסר אונים.
+
+\textbf{סימפטומים עיקריים:}
+\begin{itemize}
+    \item חוויה מחדש של הטראומה (סיוטים או מחשבות חודרניות)
+    \item עלייה כללית בעוררות ובתגובות חרדתיות
+    \item ניסיון להימנע מדברים שמזכירים את הטראומה
+\end{itemize}
+
+\begin{tabularx}{\textwidth}{|X|X|X|}
+\hline
+\textbf{טיפול} & \textbf{תיאור} & \textbf{יעילות} \\
+\hline
+רלקסציה & לימוד תרגילי כיווץ והרפיית שרירים & 40\% החלמה \\
+\hline
+PE (חשיפה מתמשכת) & חשיפה אינטנסיבית לאירוע הטראומטי & 90\% החלמה \\
+\hline
+\end{tabularx}
+
+\subsection{מדע בסיסי לעומת מדע יישומי}
+\begin{itemize}
+    \item \textbf{מדע בסיסי}: מנסה להבין את המנגנון שעשוי להסביר תופעה בעולם
+    \item \textbf{מדע יישומי}: מאפשר לפתח שיטות שישפרו את איכות החיים שלנו
+\end{itemize}
+
+\newpage
+%====================================
+\section{יחידה 2 - גישות בפסיכולוגיה: הביהביוריזם}
+%====================================
+
+\subsection{מבוא לביהביוריזם}
+הזרם המרכזי ששלט בפסיכולוגיה בחלק הראשון של המאה ה-20.
+
+\begin{warnbox}[הקופסה השחורה]
+תהליכים מנטליים כמו זיכרון, חשיבה, שפה וקבלת החלטות - אי אפשר לראות ולכן (לטענת הביהביוריסטים) אי אפשר לחקור באופן מדעי.
+\end{warnbox}
+
+\subsection{איוון פבלוב - התניה קלאסית}
+פבלוב היה פיזיולוג רוסי שחקר את מערכת העיכול וזכה בפרס נובל.
+
+\begin{tabularx}{\textwidth}{|l|X|X|}
+\hline
+\textbf{מונח} & \textbf{הסבר} & \textbf{דוגמה} \\
+\hline
+גירוי בלתי מותנה & גירוי שיוצר תגובה אוטומטית & אוכל \\
+\hline
+תגובה בלתי מותנית & תגובה אוטומטית לגירוי & ריור \\
+\hline
+גירוי מותנה & גירוי ניטרלי שנקשר לגירוי בלתי מותנה & צליל \\
+\hline
+תגובה מותנית & תגובה לגירוי המותנה & ריור לצליל \\
+\hline
+\end{tabularx}
+
+\subsection{תהליכי למידה}
+\begin{enumerate}
+    \item \textbf{רכישה (Acquisition)} - למידת הקשר בין גירוי מותנה לתגובה מותנית
+    \item \textbf{הכחדה (Extinction)} - הפסקת הצימוד וירידה בתגובה
+    \item \textbf{החלמה ספונטנית (Spontaneous Recovery)} - חזרת התגובה למחרת
+\end{enumerate}
+
+\subsection{ג'ון ווטסון - התניית פחד}
+הניסוי של אלברט הקטן בדק האם ניתן לגרום לתינוק לפחד מחיה שאינו מפחד ממנה.
+
+\subsection{ב.פ. סקינר - התניה אופרנטית}
+
+\begin{tabularx}{\textwidth}{|l|l|X|X|}
+\hline
+\textbf{סוג} & \textbf{מטרה} & \textbf{מנגנון} & \textbf{דוגמה} \\
+\hline
+חיזוק חיובי & הגברת התנהגות & מתן דבר נעים & "אם תכין שיעורים תוכל לשחק" \\
+\hline
+חיזוק שלילי & הגברת התנהגות & הסרת דבר לא נעים & צפצוף שנפסק בחגירת חגורה \\
+\hline
+עונש חיובי & הפחתת התנהגות & מתן דבר לא נעים & קנס על חנייה \\
+\hline
+עונש שלילי & הפחתת התנהגות & מניעת דבר נעים & "אם תצעוק לא תקבל סוכריה" \\
+\hline
+\end{tabularx}
+
+\newpage
+%====================================
+\section{יחידה 3 - קוגניציה}
+%====================================
+
+\subsection{המהפכה הקוגניטיבית}
+\begin{itemize}
+    \item \textbf{נועם חומסקי} - בלשן מ-MIT, טען על קיום מנגנון מולד לרכישת שפה (LAD)
+    \item \textbf{ג'ורג' מילר} - חקר את גודל זיכרון העבודה ($7\pm2$ פריטים)
+\end{itemize}
+
+\begin{infobox}[שתי הטענות המרכזיות]
+\begin{enumerate}
+    \item מדע הפסיכולוגיה חייב ויכול לחקור באופן מדעי גם תהליכים מנטליים
+    \item אי אפשר להסביר התנהגות רק על סמך למידה מהסביבה - יש מרכיב מולד
+\end{enumerate}
+\end{infobox}
+
+\subsection{מנגנון הקשב}
+היכולת לעבד מידע מוגבלת - צריך לבחור לאיזה מידע לתת עדיפות.
+
+\textbf{שתי דרכים להפניית קשב:}
+\begin{enumerate}
+    \item \textbf{הגירוי עצמו} - גירויים בולטים ועוצמתיים ימשכו קשב
+    \item \textbf{רצון/ציפיות} - קשב רצוני (תופעת מסיבת הקוקטייל)
+\end{enumerate}
+
+\subsection{ייצוג (Representation)}
+המיינד מייצר ייצוג של העולם החיצוני שאינו זהה לגירוי עצמו.
+
+\begin{tabularx}{\textwidth}{|l|X|X|}
+\hline
+\textbf{תהליך} & \textbf{מקור} & \textbf{דוגמה} \\
+\hline
+Bottom-up & הגירוי עצמו & מה שנכנס דרך החושים \\
+\hline
+Top-down & ידע, זיכרון, ציפיות & פרשנות שמשפיעה על הייצוג \\
+\hline
+\end{tabularx}
+
+\subsection{זיכרון מובנה (Constructive Memory)}
+\begin{tipbox}[הניסוי של אליזבת לופטוס (1974)]
+נבדקים צפו בסרט תאונה ונשאלו על המהירות.
+
+שאלה עם "נמחצה" הובילה להערכת מהירות גבוהה יותר + "זיכרון" של זכוכית שבורה שלא הייתה.
+
+\textbf{השלכות}: לאופן ניסוח השאלה יש השפעה עצומה על דיווח העדים.
+\end{tipbox}
+
+\newpage
+%====================================
+\section{יחידה 4 - גוף ומוח}
+%====================================
+
+\subsection{הקשר בין גוף ונפש}
+\begin{itemize}
+    \item \textbf{רדוקציוניזם}: התיאור הביולוגי של תהליכים פסיכולוגיים
+    \item \textbf{קשר דו-כיווני}: המוח יוצר מחשבות, והמחשבות משנות את המוח
+\end{itemize}
+
+\subsection{הנוירון}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{חלק} & \textbf{תפקיד} \\
+\hline
+דנדריטים & קבלת מידע מנוירונים אחרים \\
+\hline
+גוף התא & עיבוד המידע \\
+\hline
+אקסון & העברת הסיגנל החשמלי \\
+\hline
+כפתורים טרמינליים & שחרור נוירוטרנסמיטרים \\
+\hline
+\end{tabularx}
+
+\subsection{אזורי מוח חשובים}
+\begin{itemize}
+    \item \textbf{אזור ברוקה} (פול ברוקה, 1861) - פגיעה גורמת לבעיות בהפקת שפה
+    \item \textbf{אזור ורניקה} (קרל ורניקה, 1874) - פגיעה גורמת לדיבור שוטף אך חסר משמעות
+\end{itemize}
+
+\subsection{המקרה של H.M}
+H.M עבר ניתוח להסרת ההיפוקמפוס משני הצדדים בגלל אפילפסיה.
+
+\begin{tabularx}{\textwidth}{|l|X|c|}
+\hline
+\textbf{סוג זיכרון} & \textbf{תיאור} & \textbf{תלוי בהיפוקמפוס?} \\
+\hline
+זיכרון לטווח קצר & שניות-דקות, מוגבל & לא \\
+\hline
+זיכרון דקלרטיבי & אירועים ועובדות & כן \\
+\hline
+זיכרון פרוצדורלי & מוטורי (רכיבה על אופניים) & לא \\
+\hline
+התניות & התניית פחד & לא (אמיגדלה) \\
+\hline
+\end{tabularx}
+
+\newpage
+%====================================
+\section{יחידה 5 - פסיכולוגיה התפתחותית}
+%====================================
+
+\subsection{התקופה הקריטית}
+התקופה שבה החשיפה לסביבה אמורה להתרחש להתפתחות מלאה.
+
+\begin{warnbox}[דוגמה: ג'יני]
+ילדה שלא נחשפה לשפה עד גיל 13 - לא הצליחה ללמוד מעבר לרמה בסיסית.
+\end{warnbox}
+
+\subsection{איך חוקרים מיינד של תינוקות?}
+\begin{itemize}
+    \item \textbf{קצב דופק} - שינוי בדופק לגירוי
+    \item \textbf{תדירות מציצה} - שינוי בקצב מציצת מוצץ
+    \item \textbf{זמן הסתכלות} - כמה זמן מסתכלים על גירוי (הנפוץ ביותר)
+\end{itemize}
+
+\subsection{Perceptual Narrowing}
+\begin{itemize}
+    \item \textbf{עד 6 חודשים}: מבחינים בין כל הפונמות בעולם ופנים מכל הגזעים
+    \item \textbf{מגיל 9 חודשים}: מבחינים רק בפונמות של שפת האם ובפנים מוכרים
+\end{itemize}
+
+\subsection{תיאוריית ההתפתחות של פיאז'ה}
+\begin{tabularx}{\textwidth}{|l|c|X|}
+\hline
+\textbf{שלב} & \textbf{גיל} & \textbf{מאפיינים} \\
+\hline
+סנסורי-מוטורי & 0-2 & למידה דרך חושים ותנועה, קביעות אובייקט \\
+\hline
+פרה-אופרציונלי & 2-7 & שפה וחשיבה סימבולית, אגוצנטריות \\
+\hline
+אופרציונלי קונקרטי & 7-10 & הבנת שימור, נקודת מבט של אחר \\
+\hline
+אופרציונלי פורמלי & 10+ & חשיבה היפותטית ואבסטרקטית \\
+\hline
+\end{tabularx}
+
+\subsection{Theory of Mind}
+היכולת להבין שלאנשים אחרים יש כוונות, אמונות ורצונות שונים משלי.
+
+מתפתחת סביב גיל 4-5 (נבדקת במשימת False Belief).
+
+\newpage
+%====================================
+\section{יחידה 6 - פסיכולוגיה חברתית}
+%====================================
+
+\subsection{השפעה על ביצועים}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{תופעה} & \textbf{מתי} \\
+\hline
+הקלה חברתית & משימה קלה - ביצוע משתפר \\
+\hline
+עכבה חברתית & משימה קשה - ביצוע נפגע \\
+\hline
+\end{tabularx}
+
+\subsection{קונפורמיזם - הניסוי של סלומון אש}
+\begin{infobox}[תוצאות]
+\begin{itemize}
+    \item 76\% ענו לפחות תשובה אחת שגויה
+    \item 50\% ענו שגוי בלפחות מחצית מהסבבים
+    \item מספיק שאדם אחד בקבוצה יאמר תשובה שונה - והנבדק יאמר את התשובה הנכונה
+\end{itemize}
+\end{infobox}
+
+\subsection{אפקט הצופה מהצד}
+ככל שיש יותר אנשים - פחות סיכוי לעזור.
+
+\textbf{הסברים:}
+\begin{enumerate}
+    \item \textbf{Pluralistic Ignorance} - "אם אחרים לא עוזרים, כנראה המצב לא מסוכן"
+    \item \textbf{פיזור אחריות} - "מישהו אחר יטפל"
+    \item \textbf{Audience Inhibition} - חשש מלהביך את עצמי
+\end{enumerate}
+
+\subsection{ניסוי מילגרם (1963)}
+\begin{warnbox}[תוצאות מזעזעות]
+60\%+ הסכימו לתת שוקים מסוכנים לאדם אחר כשנאמר להם לעשות זאת.
+
+\textbf{טעות הייחוס בסיסית}: נטייה לייחס התנהגות של אחרים לאישיותם, ולא למצב.
+\end{warnbox}
+
+\subsection{Stereotype Threat}
+חשש שביצועים יאוששו סטריאוטיפ שלילי.
+
+\textbf{דוגמה}: נשים במתמטיקה - כשמזכירים הבדלים מגדריים, הביצוע יורד.
+
+\newpage
+%====================================
+\section{יחידה 7 - הבדלים בינאישיים}
+%====================================
+
+\subsection{מבחני אינטליגנציה}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{מאפיין} & \textbf{הסבר} \\
+\hline
+מהימנות & דיוק - תוצאה דומה במדידות חוזרות \\
+\hline
+תוקף & מודד את מה שאמור למדוד \\
+\hline
+\end{tabularx}
+
+\subsection{תיאוריית G (ספירמן)}
+\begin{itemize}
+    \item \textbf{G} = יכולת כללית משותפת לכל היכולות
+    \item \textbf{S} = יכולות ספציפיות שאינן קשורות זו לזו
+\end{itemize}
+
+\subsection{השפעת תורשה וסביבה}
+\begin{tipbox}[ממצאים]
+לתורשה תרומה משמעותית יותר מסביבה להבדלים באינטליגנציה.
+
+תאומים זהים שנפרדו מראים מתאם גבוה ב-IQ.
+\end{tipbox}
+
+\subsection{חמשת הגדולים (Big 5)}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{תכונה} & \textbf{מאפיינים} \\
+\hline
+מוחצנות (Extroversion) & חברותיות, דברנות, פעלתנות \\
+\hline
+יציבות רגשית (Neuroticism) & חרדה, דיכאון, עצבנות \\
+\hline
+נועם הליכות (Agreeableness) & אדיבות, אמון, מזג נוח \\
+\hline
+מצפוניות (Conscientiousness) & אחריות, יסודיות, משמעת עצמית \\
+\hline
+פתיחות (Openness) & דמיון, סקרנות, אופקים רחבים \\
+\hline
+\end{tabularx}
+
+\subsection{מבחן המרשמלו (וולטר מישל)}
+ילדים שהצליחו לדחות סיפוקים הפכו לבני נוער עם יכולת ריכוז, שליטה עצמית, וציונים גבוהים יותר.
+
+\newpage
+%====================================
+\section{יחידה 8 - פסיכופתולוגיה}
+%====================================
+
+\subsection{מהי פסיכופתולוגיה?}
+הפרעת נפש - מחלה שמקורה בהפרעה מוחית.
+
+\textbf{שני אתגרים מרכזיים:}
+\begin{enumerate}
+    \item \textbf{אבחון} - האם אדם סובל מהפרעה ומאיזו
+    \item \textbf{טיפול} - הצעת טיפול מתאים ואפקטיבי
+\end{enumerate}
+
+\subsection{ה-DSM}
+\textbf{DSM} = Diagnostic and Statistical Manual of Mental Disorders
+
+ספר שמאגד את כל ההפרעות המנטליות והסימפטומים שמאפיינים אותן.
+
+\begin{infobox}[קטגוריות הפרעות]
+\begin{itemize}
+    \item הפרעות נוירו-התפתחותיות (אוטיזם, פיגור)
+    \item סכיזופרניה
+    \item הפרעות דיכאון
+    \item הפרעות חרדה
+    \item הפרעה אובססיבית קומפולסיבית
+    \item הפרעות טראומה
+    \item התמכרויות
+    \item הפרעות אישיות
+\end{itemize}
+\end{infobox}
+
+\subsection{סוגי טיפול}
+
+\subsubsection{הטיפול הביולוגי}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{סוג} & \textbf{שימוש} \\
+\hline
+ליתיום & הפרעה דו-קוטבית \\
+\hline
+אנטי-פסיכוטיות & סכיזופרניה (הזיות, מחשבות שווא) \\
+\hline
+מרגיעות & חרדה \\
+\hline
+נוגדות דיכאון & דיכאון (פרוזק) \\
+\hline
+\end{tabularx}
+
+\subsubsection{הטיפול הפסיכודינמי (מבוסס על פרויד)}
+\begin{itemize}
+    \item המקור לפתולוגיה: קונפליקט בין מודע ללא מודע
+    \item טכניקות: אסוציאציות חופשיות, ניתוח חלומות, Transference
+\end{itemize}
+
+\subsubsection{הטיפול הקוגניטיבי-התנהגותי (CBT)}
+\begin{itemize}
+    \item \textbf{החלק ההתנהגותי (וולפה)}: הקהיה שיטתית - חשיפה הדרגתית לגירויים מפחידים
+    \item \textbf{החלק הקוגניטיבי (אהרון בק)}: זיהוי הטיות קוגניטיביות ובחינת תוקפן
+\end{itemize}
+
+\begin{tipbox}[מאפייני CBT]
+\begin{itemize}
+    \item מטרות מוגדרות
+    \item טיפול קצר וממוקד
+    \item מטפל אקטיבי ומכוון
+    \item שיעורי בית
+    \item Psycho-education
+\end{itemize}
+\end{tipbox}
+
+\subsection{הגל השלישי}
+גישות חדשות כמו מיינדפולנס (קשיבות) ו-ACT - התבוננות על מחשבות מהצד וקבלתן.
+
+%====================================
+\vfill
+\begin{center}
+\rule{0.5\textwidth}{0.5pt}\\[0.3cm]
+\textit{סיכום זה נוצר באמצעות Claude AI}\\
+\url{https://github.com/orinlevi/intro_to_psychology_notes}
+\end{center}
+
+\end{document}

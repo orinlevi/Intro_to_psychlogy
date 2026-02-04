@@ -1,0 +1,78 @@
+site_name: מבוא לפסיכולוגיה
+site_description: סיכום מקיף לקורס מבוא לפסיכולוגיה, אוניברסיטת תל אביב
+docs_dir: docs
+site_url: https://orinlevi.github.io/intro_to_psychology_notes/
+
+repo_name: intro_to_psychology_notes
+repo_url: https://github.com/orinlevi/intro_to_psychology_notes
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/orinlevi/intro_to_psychology_notes
+
+theme:
+  name: material
+  language: he
+  direction: rtl
+  palette:
+    - scheme: slate
+      media: "(min-width: 0)"
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: מצב יום
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: מצב לילה
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: he
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - בית: README.md
+  - סיכומים:
+    - יחידה 1 - מהי פסיכולוגיה: notes/unit_1.md
+    - יחידה 2 - גישות בפסיכולוגיה: notes/unit_2.md
+    - יחידה 3 - קוגניציה: notes/unit_3.md
+    - יחידה 4 - גוף ומוח: notes/unit_4.md
+    - יחידה 5 - פסיכולוגיה התפתחותית: notes/unit_5.md
+    - יחידה 6 - פסיכולוגיה חברתית: notes/unit_6.md
+    - יחידה 7 - הבדלים בינאישיים: notes/unit_7.md
+    - יחידה 8 - פסיכופתולוגיה: notes/unit_8.md
