@@ -2,7 +2,7 @@
 
 סיכום מקיף לקורס מבוא לפסיכולוגיה | אוניברסיטת תל אביב
 
-**[📖 לצפייה בתיעוד ולהורדת סיכום PDF → האתר ב-GitHub Pages](https://orinlevi-neurocspsy.github.io/Intro_to_psychlogy/)**
+**[📖 לצפייה בתיעוד ולהורדת סיכום PDF → האתר ב-GitHub Pages](https://orinlevi-neurocspsy.github.io/Intro_to_psychology/)**
 
 ---
 
@@ -23,7 +23,7 @@
 
 ## 🚀 שימוש
 
-התיעוד וסיכום ה-PDF זמינים ב-[GitHub Pages](https://orinlevi-neurocspsy.github.io/Intro_to_psychlogy/) של הריפו – שם אפשר לצפות בכל הסיכומים ולהוריד את ה-PDF.
+התיעוד וסיכום ה-PDF זמינים ב-[GitHub Pages](https://orinlevi-neurocspsy.github.io/Intro_to_psychology/) של הריפו – שם אפשר לצפות בכל הסיכומים ולהוריד את ה-PDF.
 
 ---
 
