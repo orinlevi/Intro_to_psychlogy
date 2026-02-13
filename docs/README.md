@@ -8,6 +8,7 @@
 
 [📄 הורד סיכום LaTeX](assets/summary.pdf){ .md-button .md-button--primary download="intro_to_psychology_summary.pdf" }
 [📥 הורד סיכום שלי](assets/mellel_summary.pdf){ .md-button download="intro_to_psychology_my_summary.pdf" }
+[📚 קריאות חובה](assets/required_readings.pdf){ .md-button download="intro_to_psychology_required_readings.pdf" }
 
 </div>
 
